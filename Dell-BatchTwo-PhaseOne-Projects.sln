@@ -7,15 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpDayOne-Projects", "CS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp-DayTwo-Projects", "CSharp-DayTwo-Projects\CSharp-DayTwo-Projects.csproj", "{21611EB0-6857-496F-9E24-C9946F32A992}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Student_ClassLibrary", "Student_ClassLibrary\Student_ClassLibrary.csproj", "{D658D3C5-F567-4E04-997F-42DBC3297916}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Student_ClassLibrary", "Student_ClassLibrary\Student_ClassLibrary.csproj", "{D658D3C5-F567-4E04-997F-42DBC3297916}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marks_ClassLibrary", "Marks_ClassLibrary\Marks_ClassLibrary.csproj", "{0CA5D1B9-5A17-4E2C-A396-44BCC05D97D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marks_ClassLibrary", "Marks_ClassLibrary\Marks_ClassLibrary.csproj", "{0CA5D1B9-5A17-4E2C-A396-44BCC05D97D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sport_ClassLibrary", "Sport_ClassLibrary\Sport_ClassLibrary.csproj", "{60A2D3B8-6206-40B2-93BF-8C634159360F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sport_ClassLibrary", "Sport_ClassLibrary\Sport_ClassLibrary.csproj", "{60A2D3B8-6206-40B2-93BF-8C634159360F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result_ClassLibrary", "Result_ClassLibrary\Result_ClassLibrary.csproj", "{352B8272-3544-4A87-8F74-64C7E935F718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Result_ClassLibrary", "Result_ClassLibrary\Result_ClassLibrary.csproj", "{352B8272-3544-4A87-8F74-64C7E935F718}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp-DayThree-Projects", "CSharp-DayThree-Projects\CSharp-DayThree-Projects.csproj", "{6465E0DB-4851-4D16-A85A-0C7A708B8806}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp-DayThree-Projects", "CSharp-DayThree-Projects\CSharp-DayThree-Projects.csproj", "{6465E0DB-4851-4D16-A85A-0C7A708B8806}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp_DayFour_Projects", "Csharp_DayFour_Projects\Csharp_DayFour_Projects.csproj", "{9042E07C-8EEE-4216-9406-404FECD0BA21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{6465E0DB-4851-4D16-A85A-0C7A708B8806}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6465E0DB-4851-4D16-A85A-0C7A708B8806}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6465E0DB-4851-4D16-A85A-0C7A708B8806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9042E07C-8EEE-4216-9406-404FECD0BA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9042E07C-8EEE-4216-9406-404FECD0BA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9042E07C-8EEE-4216-9406-404FECD0BA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9042E07C-8EEE-4216-9406-404FECD0BA21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
