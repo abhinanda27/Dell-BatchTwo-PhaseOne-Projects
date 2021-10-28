@@ -21,9 +21,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Csharp_DayFour_Projects", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructureImplementation", "DataStructureImplementation\DataStructureImplementation.csproj", "{7D202270-C075-4FEE-A3D0-274DB47E85E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresDay2", "DataStructuresDay2\DataStructuresDay2.csproj", "{1D7BB3B5-D7E9-467B-824E-AD63FC30E998}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructuresDay2", "DataStructuresDay2\DataStructuresDay2.csproj", "{1D7BB3B5-D7E9-467B-824E-AD63FC30E998}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiscConcepts", "MiscConcepts\MiscConcepts.csproj", "{BDE4C2E1-0C85-4056-A107-53DB42AFC93C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiscConcepts", "MiscConcepts\MiscConcepts.csproj", "{BDE4C2E1-0C85-4056-A107-53DB42AFC93C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericDelegatesExample", "GenericDelegatesExample\GenericDelegatesExample.csproj", "{944B1D6A-0568-411B-A566-239E5071B555}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionExample", "CollectionExample\CollectionExample.csproj", "{26E61E92-F714-4B66-8CE2-CE912A335FA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainbowSchoolTeacherData", "RainbowSchoolTeacherData\RainbowSchoolTeacherData.csproj", "{DEB1733A-85CB-4A02-9671-90B9E6BDF62F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{56D94B5D-6F0A-433B-84CA-9C88F2AD9FD4}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +86,18 @@ Global
 		{BDE4C2E1-0C85-4056-A107-53DB42AFC93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDE4C2E1-0C85-4056-A107-53DB42AFC93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDE4C2E1-0C85-4056-A107-53DB42AFC93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{944B1D6A-0568-411B-A566-239E5071B555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{944B1D6A-0568-411B-A566-239E5071B555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{944B1D6A-0568-411B-A566-239E5071B555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{944B1D6A-0568-411B-A566-239E5071B555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E61E92-F714-4B66-8CE2-CE912A335FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E61E92-F714-4B66-8CE2-CE912A335FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E61E92-F714-4B66-8CE2-CE912A335FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E61E92-F714-4B66-8CE2-CE912A335FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB1733A-85CB-4A02-9671-90B9E6BDF62F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB1733A-85CB-4A02-9671-90B9E6BDF62F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB1733A-85CB-4A02-9671-90B9E6BDF62F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB1733A-85CB-4A02-9671-90B9E6BDF62F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

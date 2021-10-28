@@ -13,7 +13,7 @@ namespace Csharp_DayFour_Projects
     //{
     //    public string Name { get; set; }
     //    public float Salary { get; set; }
-    //    public int  Age { get; set; }
+    //    public int Age { get; set; }
     //}
     //class FileHandlingExampleThree
     //{
@@ -22,29 +22,30 @@ namespace Csharp_DayFour_Projects
     //        Employee employee = new Employee()
     //        {
     //            Name = "King",
-    //        Salary = 12000,
-    //        Age = 23 };
-
-    //        //IFormatter formatter = new BinaryFormatter();
-    //        //Stream stream = new FileStream("C\\data\\data.txt", FileMode.Create, FileAccess
-    //        //    .Write);
-    //        //formatter.Serialize(stream, employee);
-
-    //        //Console.WriteLine("Content success");
-    //        //stream.Close();
-    //        //Console.ReadKey();
-
-    //        //Deserialization:
+    //            Salary = 12000,
+    //            Age = 23
+    //        };
 
     //        IFormatter formatter = new BinaryFormatter();
-    //        Stream stream = new FileStream("C\\data\\data.txt", FileMode.Create, FileAccess
+    //        Stream stream = new FileStream("C:\\data\\data.txt", FileMode.Create, FileAccess
     //            .Write);
     //        formatter.Serialize(stream, employee);
-    //        Employee empObj = (Employee)formatter.Deserialize(stream);
-    //        Console.WriteLine("{0},{1},{2}", empObj.Name, empObj.Salary, empObj.Age);
 
+    //        Console.WriteLine("Content success");
     //        stream.Close();
     //        Console.ReadKey();
+
+    //    //Deserialization:
+
+    //    //    IFormatter formatter = new BinaryFormatter();
+    //    //    Stream stream = new FileStream("C\\data\\data.txt", FileMode.Create, FileAccess
+    //    //        .Write);
+    //    //    formatter.Serialize(stream, employee);
+    //    //    Employee empObj = (Employee)formatter.Deserialize(stream);
+    //    //    Console.WriteLine("{0},{1},{2}", empObj.Name, empObj.Salary, empObj.Age);
+
+    //    //    stream.Close();
+    //    //    Console.ReadKey();
 
     //    }
     //}

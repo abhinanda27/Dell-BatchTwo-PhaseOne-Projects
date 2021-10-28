@@ -10,7 +10,7 @@ namespace Csharp_DayFour_Projects
     //class FileHandlingExample
     //{
 
-    //    static void Main(string[]args)
+    //    static void Main(string[] args)
     //    {
     //        //FileStream fileStream = new FileStream("C:\\data\\info.txt",FileMode.Append);
     //        //byte[] bdata = Encoding.Default.GetBytes("Hello Everyone");
@@ -58,6 +58,6 @@ namespace Csharp_DayFour_Projects
 
     //        Console.ReadKey();
 
-    //    }    
+    //    }
     //}
 }
