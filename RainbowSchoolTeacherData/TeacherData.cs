@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
@@ -74,18 +75,25 @@ namespace RainbowSchoolTeacherData
 
                 IFormatter formatter = new BinaryFormatter();
                 Stream stream = new FileStream("C:\\data\\TeacherDetails.txt", FileMode.OpenOrCreate, FileAccess.Read);
-                
-                foreach (var obj in stream.ToString())
+                try
                 {
-                    if (stream.Length != 0)
+                    foreach (var obj in stream.ToString())
                     {
-                        
-                        Teacher teachObj = (Teacher)formatter.Deserialize(stream);
-                        Console.WriteLine("Name :{0}, ID :{1},ClassandSection :{2}", teachObj.Name, teachObj.ID, teachObj.ClassandSection);
+                        if (stream.Length != 0)
+                        {
+
+                            Teacher teachObj = (Teacher)formatter.Deserialize(stream);
+                            Console.WriteLine("Name :{0}, ID :{1},ClassandSection :{2}", teachObj.Name, teachObj.ID, teachObj.ClassandSection);
+                        }
                     }
-                 }
-                stream.Close();
-                Console.ReadKey();
+                   
+                    stream.Close();
+                    Console.ReadKey();
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
                
 
             }
@@ -93,7 +101,7 @@ namespace RainbowSchoolTeacherData
            
             public void UpdateData()
             {
-                throw new NotImplementedException();
+                
             }
 
 
