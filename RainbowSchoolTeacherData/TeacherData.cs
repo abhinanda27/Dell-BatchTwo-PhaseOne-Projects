@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -27,34 +28,66 @@ namespace RainbowSchoolTeacherData
 
             public void StoreData()
             {
-                
-                Teacher teacherdetails = new Teacher()
+                try
                 {
-                   
-                    ID = 123,
-                    Name = "Priya",
-                    ClassandSection = "6A",
+                    Teacher teacherdetails = new Teacher();
 
+                    do
+                    {
+                        Console.WriteLine("Enter Teacher ID :");
+                        teacherdetails.ID = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter Teacher Name :");
+                        teacherdetails.Name = Convert.ToString(Console.ReadLine());
+                        Console.WriteLine("Enter Teacher Class And Section :");
+                        teacherdetails.ClassandSection = Convert.ToString(Console.ReadLine());
 
-                };
+                        Stream stream = new FileStream("C:\\data\\TeacherDetails.txt", FileMode.Append, FileAccess.Write);
+                        
+                        
+                        IFormatter formatter = new BinaryFormatter();
 
-             
-                Stream stream = new FileStream("C:\\data\\TeacherDetails.txt", FileMode.Create, FileAccess.Write);
-                IFormatter formatter = new BinaryFormatter();
+                        formatter.Serialize(stream, teacherdetails);
+                        Console.WriteLine("Content success");
+                        stream.Close();
+                    }
 
-                formatter.Serialize(stream,teacherdetails);
-                Console.WriteLine("Content success");
-                stream.Close();
-                Console.ReadKey();
-             
-            
+                    while (teacherdetails.ID!=100);
+
+                    if(teacherdetails.ID == 0 || teacherdetails.ID ==-1)
+                    {
+                        Console.WriteLine("Wrong Input");
+                        
+                    }
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+                
             }
 
 
 
             public void RetrieveData()
+
             {
-                throw new NotImplementedException();
+
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream("C:\\data\\TeacherDetails.txt", FileMode.OpenOrCreate, FileAccess.Read);
+                
+                foreach (var obj in stream.ToString())
+                {
+                    if (stream.Length != 0)
+                    {
+                        
+                        Teacher teachObj = (Teacher)formatter.Deserialize(stream);
+                        Console.WriteLine("Name :{0}, ID :{1},ClassandSection :{2}", teachObj.Name, teachObj.ID, teachObj.ClassandSection);
+                    }
+                 }
+                stream.Close();
+                Console.ReadKey();
+               
+
             }
 
            
@@ -66,18 +99,7 @@ namespace RainbowSchoolTeacherData
 
         }
 
-        public void Deserialize()
-
-        {
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("C:\\data\\TeacherDetails.txt", FileMode.Open, FileAccess.Read);
-
-            Teacher teachObj = (Teacher)formatter.Deserialize(stream);
-            Console.WriteLine("{0},{1},{2}", teachObj.Name, teachObj.ID, teachObj.ClassandSection);
-
-            stream.Close();
-            Console.ReadKey();
-        }
+      
 
 
 
@@ -85,8 +107,7 @@ namespace RainbowSchoolTeacherData
         {
             ITeacher teacher_details = new TeacherDetails();
             teacher_details.StoreData();
-            TeacherData data = new TeacherData();
-            data.Deserialize();
+            teacher_details.RetrieveData();
             Console.ReadKey();
 
 
