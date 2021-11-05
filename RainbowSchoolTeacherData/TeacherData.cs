@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.RegularExpressions;
 
 namespace RainbowSchoolTeacherData
 {
@@ -23,7 +24,7 @@ namespace RainbowSchoolTeacherData
             void UpdateData();
         }
 
-        
+        [Serializable]
         class TeacherDetails : ITeacher
         {
 
@@ -42,9 +43,9 @@ namespace RainbowSchoolTeacherData
                         Console.WriteLine("Enter Teacher Class And Section :");
                         teacherdetails.ClassandSection = Convert.ToString(Console.ReadLine());
 
+
+
                         Stream stream = new FileStream("C:\\data\\TeacherDetails.txt", FileMode.Append, FileAccess.Write);
-                        
-                        
                         IFormatter formatter = new BinaryFormatter();
 
                         formatter.Serialize(stream, teacherdetails);
@@ -52,19 +53,19 @@ namespace RainbowSchoolTeacherData
                         stream.Close();
                     }
 
-                    while (teacherdetails.ID!=100);
+                    while (teacherdetails.ID != 100);
 
-                    if(teacherdetails.ID == 0 || teacherdetails.ID ==-1)
+                    if (teacherdetails.ID == 0 || teacherdetails.ID == -1)
                     {
                         Console.WriteLine("Wrong Input");
-                        
+
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
-                
+
             }
 
 
@@ -74,40 +75,65 @@ namespace RainbowSchoolTeacherData
             {
 
                 IFormatter formatter = new BinaryFormatter();
-                Stream stream = new FileStream("C:\\data\\TeacherDetails.txt", FileMode.OpenOrCreate, FileAccess.Read);
-                try
+                using (FileStream stream = new FileStream("C:\\data\\TeacherDetails.txt", FileMode.OpenOrCreate, FileAccess.Read))
                 {
-                    foreach (var obj in stream.ToString())
-                    {
-                        if (stream.Length != 0)
-                        {
 
-                            Teacher teachObj = (Teacher)formatter.Deserialize(stream);
-                            Console.WriteLine("Name :{0}, ID :{1},ClassandSection :{2}", teachObj.Name, teachObj.ID, teachObj.ClassandSection);
+                    try
+                    {
+                        stream.Position = 0;
+                        foreach (var obj in stream.ToString())
+                        {
+                            if (stream.Length != 0)
+                            {
+                                Teacher teachObj = (Teacher)formatter.Deserialize(stream);
+                                Console.WriteLine("Name :{0}, ID :{1},ClassandSection :{2}", teachObj.Name, teachObj.ID, teachObj.ClassandSection);
+                            }
+
+
                         }
+
+                        stream.Close();
+                        Console.ReadKey();
+
                     }
-                   
-                    stream.Close();
-                    Console.ReadKey();
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
                 }
-                catch(Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                }
-               
+
 
             }
 
-           
+
             public void UpdateData()
             {
-                
-            }
 
+                Teacher teacherdetailsnew = new Teacher();
+                Console.WriteLine("Update data");
+                teacherdetailsnew.ID = Convert.ToInt32(Console.ReadLine());
+                 if (teacherdetailsnew.ID == 200)
+                    {
+                        Console.WriteLine("Enter NewTeacher ID :");
+                        teacherdetailsnew.ID = Convert.ToInt32(Console.ReadLine());
+
+
+                        Stream stream = new FileStream("C:\\data\\TeacherDetails.txt", FileMode.Append, FileAccess.Write);
+                        IFormatter formatter = new BinaryFormatter();
+
+                        formatter.Serialize(stream, teacherdetailsnew);
+                        Console.WriteLine("Content success");
+                        stream.Close();
+                    }
+                
+               
+
+
+            }
 
         }
 
-      
+
 
 
 
@@ -115,6 +141,8 @@ namespace RainbowSchoolTeacherData
         {
             ITeacher teacher_details = new TeacherDetails();
             teacher_details.StoreData();
+            
+            teacher_details.UpdateData();
             teacher_details.RetrieveData();
             Console.ReadKey();
 
